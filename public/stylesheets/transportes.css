@@ -1,0 +1,117 @@
+* {/*selector universal, reset de estilos*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+
+body{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;/*1 rem*/
+    line-height: 20px;
+}
+
+.holder{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: #2e64a1;
+    padding: 16px 0;/*1rem 0*/
+}
+header img{
+    margin-left: 10px;
+    width: 100px;
+}
+header h1{
+    color: white;
+    font-size: 40px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+    margin-left: 10px;
+}
+
+/* menu hamburguesa */
+#menu{  
+    background-color: #6da9ed;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    /*con max-height en 0 hace que no se vea, para luego hacerlo aparecer con la transición y aumentando a 26px en la otra clase*/
+    max-height: 0;
+    /* overflow hidden, es necesario para que el objeto no aparezca aunque tenga max-height 0*/
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+}
+
+#menu.mostrando {
+    max-height: 190px; /* Ajustar este valor según la altura máxima del menú */
+}
+
+.fondo-boton{
+    width: 100%;
+    background-color: #365475;
+}
+#boton-menu{
+    background-color: #6da9ed;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+#boton-menu img{
+    padding-right: 5px;
+}
+/* Rotar el icono de la hamburguesa al abrir el menú */
+#boton-menu span img.rotar{
+    transform: rotate(90deg);
+}
+
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu ul li a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0px;
+    border-bottom: 2px solid #5e95d4;
+    display: block;
+    text-align: center;
+}
+#menu ul li a:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+#menu ul li a.activo{/*para marcar la página actual*/
+    background-color: #4c76a5;
+}
+/* fin del menú */
+
+/*Novedades*/
+.novedades h4{
+    font-weight: normal;
+}
+.novedades p{
+    margin: 10px 0px;
+}
+/*fin novedades*/
+
+footer{
+    background-color: #ccc;
+    clear:both;
+    color: #333;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 20px;
+}
