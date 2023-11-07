@@ -11,6 +11,11 @@ body{
     line-height: 20px;
 }
 
+h2{
+    color: #2e64a1;
+    font-weight: 400;
+    margin: 10px 0px;
+}
 .holder{
     max-width: 960px;
     margin: 0 auto;
@@ -35,75 +40,78 @@ header h1{
     margin-left: 10px;
 }
 
-/* menu hamburguesa */
-#menu{  
-    background-color: #6da9ed;
-    width: 100%;
-    margin-bottom: 10px;
-    text-align: center;
-    /*con max-height en 0 hace que no se vea, para luego hacerlo aparecer con la transición y aumentando a 26px en la otra clase*/
-    max-height: 0;
-    /* overflow hidden, es necesario para que el objeto no aparezca aunque tenga max-height 0*/
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-}
-
-#menu.mostrando {
-    max-height: 190px; /* Ajustar este valor según la altura máxima del menú */
-}
-
-.fondo-boton{
-    width: 100%;
-    background-color: #365475;
-}
-#boton-menu{
-    background-color: #6da9ed;
-    color: #fff;
-    font-size: 24px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    display: flex;
-}
-#boton-menu img{
-    padding-right: 5px;
-}
-/* Rotar el icono de la hamburguesa al abrir el menú */
-#boton-menu span img.rotar{
-    transform: rotate(90deg);
-}
-
-#menu ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.bloque{
+    padding: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-#menu ul li a{
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
-    padding: 5px 0px;
-    border-bottom: 2px solid #5e95d4;
+/* separador */
+.separador{
+    height: 30px;
+    background-color: #6da9ed;
+}
+/* fin separador */
+
+/* login */
+.login{
+    width: 300px;
+    padding: 20px 15px ;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+}
+.login label{
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.login input{
     display: block;
-    text-align: center;
+    margin-bottom: 10px;
 }
-#menu ul li a:hover{
-    background-color: rgba(0,0,0,0.3);
+.error{
+    font-size: 0.9rem;
+    color: rgb(224, 44, 44);
+    margin-bottom: 5px;
 }
-#menu ul li a.activo{/*para marcar la página actual*/
-    background-color: #4c76a5;
+.ingresar{
+    color: white;
+    background-color: #6da9ed;
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
 }
-/* fin del menú */
+.ingresar:hover{
+    background-color: #2e64a1;
+}
+/* fin login */
 
 /*Novedades*/
+.novedades{
+    padding: 20px;
+}
+.novedades h3{
+    font-weight: 300;
+    margin: 5px 0;
+}
 .novedades h4{
     font-weight: normal;
 }
 .novedades p{
     margin: 10px 0px;
+}
+.btn-logout{
+    color: white;
+    background-color: #f3814c;
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-logout:hover{
+    background-color: #ca693c;
 }
 /*fin novedades*/
 
