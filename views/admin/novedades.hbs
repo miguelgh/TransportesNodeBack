@@ -5,4 +5,32 @@
         <h3>Bienvenida {{persona}}</h3><br>
         <a href="/admin/login/logout" class="btn-logout">Cerrar Sesión</a>
     </div>
+    <div class="novedades">
+        <h3>Listado de novedades</h3>
+        <a href="/admin/novedades/agregar">+ Nuevo</a>
+    </div>
+    <div class="novedades">
+        <table>
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Título</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each novedades}}
+                <tr>
+                    <th scope="row">{{id}}</th>
+                    <td>{{titulo}}</td>
+                    <td>
+                        <a href="">edit</a>
+                        <a href="">delete</a>
+                    </td>
+                </tr>
+                {{/each}}
+
+            </tbody>
+        </table>
+    </div>
 </div>
