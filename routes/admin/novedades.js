@@ -12,13 +12,14 @@ router.get('/',async function(req, res, next) {
     });
 });
 
-//para agregar un nuevo contenido, al recibir /agregar
+//para agregar un nuevo contenido y pasar a otra página al recibir /agregar
 router.get('/agregar', (req, res, next)=> {
   res.render('admin/agregar', {
     layout: 'admin/layout'
   });
 });
 
+//inserta una nueva fila en al base de datos
 router.post('/agregar', async (req, res, next)=> {
   try{
     if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
@@ -39,6 +40,42 @@ router.post('/agregar', async (req, res, next)=> {
       message: 'no se cargó la novedad'
     })
   }
+});
+
+//seleccionamos una fila por id para poder modificarla
+router.get('/modificar/:id', async (req, res, next)=>{
+  let id = req.params.id;
+  let novedad = await novedadesModel.getNovedadById(id);
+  res.render('admin/modificar',{
+    layout: 'admin/layout',
+    novedad
+  });
+});
+
+router.post('/modificar', async (req, res, next)=>{
+  try{
+    let obj ={
+      titulo: req.body.titulo,
+      subtitulo: req.body.subtitulo,
+      cuerpo: req.body.cuerpo
+    }
+    await novedadesModel.modificarNovedadById(obj, req.body.id);
+    res.redirect('/admin/novedades');
+  }catch(error){
+    console.log(error);
+    res.render('admin/modificar', {
+      layout: 'admin/layout',
+      error: true,
+      message: 'No se modificó la novedad'
+    })
+  }
+});
+
+//elimina una fila por id
+router.get('/eliminar/:id', async (req, res, next)=> {
+  var id = req.params.id;
+  await novedadesModel.deleteNovedadById(id);
+  res.redirect('/admin/novedades')
 });
 
 module.exports = router;

@@ -1,0 +1,24 @@
+<div class="holder">
+    <div class="bloque">
+        <h2>Modificar una novedad</h2>
+        <form action="/admin/novedades/modificar" method="post">
+        <input type="hidden" value="{{novedad.id}}" name="id">
+        <div class="login">
+            <label for="titulo">Título:</label>
+            <input type="text" name="titulo" id="titulo" value="{{novedad.titulo}}" placeholder="Titulo">
+
+            <label for="subtitulo">Subtítulo:</label>
+            <input type="text" name="subtitulo" id="subtitulo" value="{{novedad.subtitulo}}" placeholder="Subtitulo">
+
+            <label for="cuerpo">Cuerpo:</label>
+                        <textarea name="cuerpo" id="cuerpo" cols="30" rows="10" placeholder="Ingrese una novedad">{{novedad.cuerpo}}</textarea>
+
+            <button type="submit" class="ingresar">Guardar</button>
+            <a href="/admin/novedades">Cancelar</a>
+        </div>
+        </form>
+        {{#if error}}
+            <p>{{message}}</p>
+        {{/if}}
+    </div>
+</div>

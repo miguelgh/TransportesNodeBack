@@ -10,9 +10,10 @@
             <input type="text" name="subtitulo" id="subtitulo" placeholder="Subtitulo">
 
             <label for="cuerpo">Cuerpo:</label>
-            <input type="text" name="cuerpo" id="cuerpo" placeholder="Cuerpo">
+            <textarea name="cuerpo" id="cuerpo" cols="30" rows="10" placeholder="Ingrese una novedad"></textarea>
 
             <button type="submit" class="ingresar">Guardar</button>
+            <a href="/admin/novedades">Cancelar</a>
         </div>
         </form>
         {{#if error}}
