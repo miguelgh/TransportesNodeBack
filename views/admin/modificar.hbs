@@ -11,14 +11,13 @@
             <input type="text" name="subtitulo" id="subtitulo" value="{{novedad.subtitulo}}" placeholder="Subtitulo">
 
             <label for="cuerpo">Cuerpo:</label>
-                        <textarea name="cuerpo" id="cuerpo" cols="30" rows="10" placeholder="Ingrese una novedad">{{novedad.cuerpo}}</textarea>
-
+            <textarea name="cuerpo" id="cuerpo" cols="30" rows="10">{{novedad.cuerpo}}</textarea>
             <button type="submit" class="ingresar">Guardar</button>
-            <a href="/admin/novedades">Cancelar</a>
+            <a class="btn-cancelar" href="/admin/novedades">Cancelar</a>
+            {{#if error}}
+                <p class="error">{{message}}</p>
+            {{/if}}
         </div>
         </form>
-        {{#if error}}
-            <p>{{message}}</p>
-        {{/if}}
     </div>
 </div>

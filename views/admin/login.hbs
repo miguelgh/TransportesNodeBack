@@ -3,9 +3,6 @@
         <h2>Iniciar sesión</h2>
         <form action="/admin/login" method="post">
         <div class="login">
-            {{#if error}}
-                <p class="error">Usuario y/o contraseña incorrectos</p>
-            {{/if}}
 
             <label for="inputUser">Usuario:</label>
             <input type="text" name="usuario" id="inputUser" placeholder="Usuario">
@@ -14,6 +11,9 @@
             <input type="password" name="password" id="inputPassword" placeholder="Contraseña">
 
             <button type="submit" class="ingresar">Ingresar</button>
+            {{#if error}}
+                <p class="error">Usuario y/o contraseña incorrectos</p>
+            {{/if}}
         </div>
         </form>
     </div>

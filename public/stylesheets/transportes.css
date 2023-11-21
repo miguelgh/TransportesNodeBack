@@ -89,7 +89,12 @@ header h1{
 
 /*Novedades*/
 .novedades{
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+.novedades h2{
+    display: inline;
 }
 .novedades h3{
     font-weight: 300;
@@ -101,10 +106,25 @@ header h1{
 .novedades p{
     margin: 10px 0px;
 }
+.novedadesHead{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;    
+}
+.novedadesHead h3{
+    font-weight: 300;
+    margin: 0;
+}
+.logout{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .btn-logout{
+    font-size: 14px;
     color: white;
     background-color: #f3814c;
-    padding: 6px 20px;
+    padding: 8px 20px;
     cursor: pointer;
     border: none;
     text-decoration: none;
@@ -113,19 +133,181 @@ header h1{
 .btn-logout:hover{
     background-color: #ca693c;
 }
+.btn-mas{
+    font-size: 14px;
+    color: white;
+    background-color: #00BCD4;
+    padding: 8px 20px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-mas:hover{
+    background-color: #04a9be;
+}
 .novedades table{
-    background-color: antiquewhite;
-    border: 1px solid #ca693c;
+    border: 1px solid #2e64a1;
+    border-radius: 3px;
     width: 100%;
+    font-size: 14px;
 }
-.novedades table tr{
-    border: 1px solid #ca693c;
-    display: flex;
+.novedades thead{
+    background-color: #2e64a1;
 }
-.novedades table td{
-    border: 1px solid #ca693c;
+.novedades th{
+    color: white;
 }
+.novedades thead th:nth-child(1) {
+    width: 5%;
+  }
+  
+.novedades thead th:nth-child(2) {
+    width: 65%;
+  }
+  
+.novedades thead th:nth-child(3) {
+    width: 30%;
+  }
+
+.textoIzq {
+    text-align: left;
+    padding-left: 5px;
+}
+.novedades .numId {
+    color: #333;
+}
+.novedades tr{
+    height: 29px;
+}
+.novedades td{
+    padding-left: 5px;
+}
+.novedades tbody tr{
+    background-color: white;
+}
+.novedades tbody tr:nth-child(even){
+    background-color: #dee2e6;
+}
+.novedades tbody tr:hover{
+    background-color: rgb(110, 169, 237,0.3);
+}
+.btn-edit{
+    display: inline-block;
+    width: 65px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    background-color: #00BCD4;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.btn-edit:hover{
+    background-color: #04a9be;
+}
+.btn-del{
+    display: inline-block;
+    width: 65px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.btn-del:hover{
+    background-color: #cc0505;
+}
+/* modal */
+ /*:boton-modal:*/
+.boton-modal{
+    display: inline-block;
+    width: 65px;
+    height: 20px;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0px;
+    transition: background-color 0.3s ease;
+}
+.boton-modal:hover{
+    background-color: #cc0505;
+}
+ /*:fin boton-modal:*/
+
+ /*:ventana-modal:*/
+.container-modal{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0; left:0;
+    background-color: rgba(144,148,150,0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.content-modal{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.btn-modal{
+    font-size: 14px;
+    color: white;
+    padding: 4px 20px;
+    cursor: pointer;
+    border: none;
+    line-height: normal;
+    text-decoration: none;
+}
+
+.del{
+    background-color: red;
+}
+.del:hover{
+    background-color: #cc0505;
+}
+
+.cancel{
+    background-color: #f3814c;
+    margin-left: 5px;
+}
+.cancel:hover{
+    background-color: #ca693c;
+}
+
+ /*:fin ventana-modal:*/
+/* fin modal */
+
 /*fin novedades*/
+
+/* Modificar */
+#cuerpo{
+    resize: none;
+}
+.btn-cancelar{
+    font-size: 14px;
+    color: white;
+    background-color: #f3814c;
+    padding: 6px 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.btn-cancelar:hover{
+    background-color: #ca693c;
+}
+/* fin Modificar */
 
 footer{
     background-color: #ccc;

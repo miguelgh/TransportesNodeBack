@@ -19,7 +19,7 @@ router.get('/agregar', (req, res, next)=> {
   });
 });
 
-//inserta una nueva fila en al base de datos
+//inserta una nueva fila en al base de datos presionando "guardar"
 router.post('/agregar', async (req, res, next)=> {
   try{
     if(req.body.titulo != "" && req.body.subtitulo != "" && req.body.cuerpo != ""){
@@ -29,7 +29,7 @@ router.post('/agregar', async (req, res, next)=> {
       res.render('admin/agregar', {
         layout: 'admin/layout',
         error: true,
-        message: 'todos los campos son requeridos'
+        message: 'Todos los campos son requeridos'
       })
     }
   }catch(error){
@@ -51,7 +51,7 @@ router.get('/modificar/:id', async (req, res, next)=>{
     novedad
   });
 });
-
+//modificamos la novedad al hacer clic en "guardar"
 router.post('/modificar', async (req, res, next)=>{
   try{
     let obj ={

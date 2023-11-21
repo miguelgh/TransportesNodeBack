@@ -16,7 +16,7 @@ router.get('/logout', function(req, res, next){
     layout: 'admin/layout'
   })
 });
-
+//al hacer clic en "ingresar" del login ejecuta la siguiente función
 router.post('/', async (req, res, next) => {
   try{
     //capturamos los datos del formulario del "login.hbs" con name usuario y password

@@ -6,7 +6,7 @@ async function getUserByUsernameAndPassword(user, password){
     try{
         //query hace la consulta a la base de datos
         var query = "select * from usuarios where usuario = ? and password = ? limit 1";
-        //la fila lleva los datos de usuario y password 
+        //la fila lleva los datos de usuario y password, md5 es el encriptador de contraseñas
         var rows = await pool.query(query, [user, md5(password)]);
         return rows[0];
     }catch(error) {
