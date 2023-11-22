@@ -1,7 +1,7 @@
 <div class="holder">
     <div class="bloque">
         <h2>Modificar una novedad</h2>
-        <form action="/admin/novedades/modificar" method="post">
+        <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
         <input type="hidden" value="{{novedad.id}}" name="id">
         <div class="login">
             <label for="titulo">Título:</label>
