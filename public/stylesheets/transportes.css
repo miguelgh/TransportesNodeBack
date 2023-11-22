@@ -163,12 +163,16 @@ header h1{
   }
   
 .novedades thead th:nth-child(2) {
-    width: 65%;
+    width: 45%;
   }
   
 .novedades thead th:nth-child(3) {
-    width: 30%;
+    width: 20%;
   }
+
+.novedades thead th:nth-child(4) {
+    width: 30%;
+}
 
 .textoIzq {
     text-align: left;

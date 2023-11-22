@@ -1,7 +1,7 @@
 <div class="holder">
     <div class="bloque">
         <h2>Agregar una nueva novedad</h2>
-        <form action="/admin/novedades/agregar" method="post">
+        <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
         <div class="login">
             <label for="titulo">Título:</label>
             <input type="text" name="titulo" id="titulo" placeholder="Titulo">
@@ -11,6 +11,11 @@
 
             <label for="cuerpo">Cuerpo:</label>
             <textarea name="cuerpo" id="cuerpo" cols="30" rows="10" placeholder="Ingrese una novedad"></textarea>
+
+            <div>
+                <label for="imagen">Imagen:</label>
+                <input type="file" name="imagen" id="imagen">
+            </div>
 
             <button type="submit" class="ingresar">Guardar</button>
             <a class="btn-cancelar" href="/admin/novedades">Cancelar</a>

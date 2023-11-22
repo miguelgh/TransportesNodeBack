@@ -12,6 +12,13 @@
 
             <label for="cuerpo">Cuerpo:</label>
             <textarea name="cuerpo" id="cuerpo" cols="30" rows="10">{{novedad.cuerpo}}</textarea>
+
+            <label for="imagen">Imagen</label>
+            <input type="file" name="imagen" id="imagen">
+            <label for="img_delete">¿Eliminar la imagen actual?</label>
+            <input type="checkbox" name="img_delete" id="img_delete" value="1">
+            <input type="hidden" name="img_original" value="{{novedad.img_id}}">
+
             <button type="submit" class="ingresar">Guardar</button>
             <a class="btn-cancelar" href="/admin/novedades">Cancelar</a>
             {{#if error}}

@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var fileupload = require ('express-fileupload');
 
 //se agrega la dependencia de dotenv para la conexión con la base de datos
 require('dotenv').config();
@@ -28,6 +29,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(fileupload({
+  useTempFiles:true,
+  tempFileDir: '/tmp/'
+}));
 
 app.use(session({
   secret: 'PW2021awqyeudj',

@@ -17,6 +17,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Título</th>
+                    <th scope="col">Imagen</th>
                     <th class="textoIzq">Acciones</th>
                 </tr>
             </thead>
@@ -25,6 +26,7 @@
                 <tr>
                     <th class="numId" scope="row">{{id}}</th>
                     <td>{{titulo}}</td>
+                    <td>{{{imagen}}}</td>
                     <td>
                         <a class="btn-edit" href="/admin/novedades/modificar/{{id}}">Editar</a>
                         <button class="boton-modal" onclick="abrirModal({{id}})">Eliminar</button>
