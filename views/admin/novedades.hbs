@@ -26,7 +26,7 @@
                 <tr>
                     <th class="numId" scope="row">{{id}}</th>
                     <td>{{titulo}}</td>
-                    <td>{{{imagen}}}</td>
+                    <td class="imgTabla">{{{imagen}}}</td>
                     <td>
                         <a class="btn-edit" href="/admin/novedades/modificar/{{id}}">Editar</a>
                         <button class="boton-modal" onclick="abrirModal({{id}})">Eliminar</button>
@@ -38,7 +38,6 @@
                                 <button class="btn-modal cancel" onclick="cerrarModal({{id}})">Cancelar</button>
                             </div>
                         </div>
-                        <!--<a class="btn-del" href="/admin/novedades/eliminar/{{id}}">Eliminar</a>-->
                     </td>
                 </tr>
                 {{/each}}

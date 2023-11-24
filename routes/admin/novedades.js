@@ -78,15 +78,25 @@ router.post('/agregar', async (req, res, next)=> {
   }
 });
 
+
 //seleccionamos una fila por id para poder modificarla
 router.get('/modificar/:id', async (req, res, next)=>{
   let id = req.params.id;
   let novedad = await novedadesModel.getNovedadById(id);
+  let imgMod = cloudinary.image(novedad.img_id, {
+    width:100,
+    height: 100,
+    crop: 'fill'
+  });
+
+
   res.render('admin/modificar',{
     layout: 'admin/layout',
-    novedad
+    novedad, imgMod
   });
 });
+
+
 //modificamos la novedad al hacer clic en "guardar"
 router.post('/modificar', async (req, res, next)=>{
   try{
