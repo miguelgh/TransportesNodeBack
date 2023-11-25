@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var fileupload = require ('express-fileupload');
+var cors = require('cors');
 
 //se agrega la dependencia de dotenv para la conexión con la base de datos
 require('dotenv').config();
@@ -17,6 +18,7 @@ var usersRouter = require('./routes/users');
 //este va a ser la sección del login donde uno puede administrar la página de novedades
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
+var apiRouter = require('./routes/api');
 
 var app = express();
 
@@ -66,6 +68,7 @@ app.use('/admin/login', loginRouter);
 //con secure, lo que hace es chequear que el id del usuario esté ok, si es así permite el render de novedades
 app.use('/admin/novedades', secure, adminRouter);
 
+app.use('/api', cors(), apiRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
