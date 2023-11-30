@@ -56,17 +56,17 @@ header h1{
 
 /* login */
 .login{
-    width: 300px;
-    padding: 20px 15px ;
+    width: 400px;
+    padding: 35px 35px ;
     border: solid 1px #ccc;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 .login label{
-    display: block;
     margin-bottom: 3px;
 }
 .login input{
-    display: block;
     height: 30px;
     margin-bottom: 10px;
 }
