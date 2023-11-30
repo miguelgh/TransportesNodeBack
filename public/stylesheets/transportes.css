@@ -355,6 +355,40 @@ header h1{
 }
 /* fin Modificar */
 
+/* agregar */
+.agregar{
+    width: 400px;
+    padding: 20px 15px ;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+}
+.agregar label{
+    display: block;
+    margin-bottom: 3px;
+}
+.agregar input{
+    display: block;
+    height: 30px;
+    margin-bottom: 10px;
+}
+.error{
+    font-size: 0.9rem;
+    color: rgb(224, 44, 44);
+    margin-bottom: 5px;
+}
+.ingresar{
+    color: white;
+    background-color: #6da9ed;
+    padding: 6px 20px;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+.ingresar:hover{
+    background-color: #2e64a1;
+}
+/* fin agregar */
+
 footer{
     background-color: #ccc;
     clear:both;
